@@ -35,7 +35,7 @@
                     <i class="fas fa-chevron-down text-xs text-gray-400"></i>
                 </button>
 
-                <div x-show="open" @click.away="open = false" x-transition
+                <div x-show="open" x-cloak @click.away="open = false" x-transition
                     class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
                     <div class="py-1">
                         <a href="{{ route('profile.edit') }}"

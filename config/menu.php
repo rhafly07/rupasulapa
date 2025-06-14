@@ -6,7 +6,6 @@ return [
         'menu' => 'Dashboard',
         'children' => [],
         'route' => 'dashboard',
-        // Tanpa roles = semua user bisa akses
     ],
     [
         'icon' => 'warehouse',
