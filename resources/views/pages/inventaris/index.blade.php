@@ -40,7 +40,7 @@
             </div>
         @endforeach
     </div>
-    <div class="flex flex-row justify-between items-center h-fit py-4">
+    <div class="flex flex-row justify-between items-center h-fit my-4">
         <span class="font-bold text-xl">Pesanan</span>
         <a href="{{ route('inventaris.kategori') }}">
             <button

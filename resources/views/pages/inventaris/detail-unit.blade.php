@@ -1,6 +1,6 @@
 <x-app-layout>
     @section('title', 'Detail Unit')
-    <div class="flex flex-row items-center h-fit px-8 py-4">
+    <div class="flex flex-row items-center h-fit mb-4">
         <span class="font-bold text-xl w-full">Merek - Unit</span>
         <div class="flex flex-row items-center w-full justify-end gap-4">
 
@@ -11,7 +11,7 @@
             <a href="{{ route('inventaris.tambah') }}" class="flex items-start">
                 <button
                     class="bg-red-700 rounded-full px-3 py-2 text-white text-sm shadow cursor-pointer hover:-translate-y-0.5 transition-all ease-in-out border-2 border-red-700"><i
-                        class="fas fa-plus border rounded-full p-0.5 text-xs"></i> Tambah Unit</button>
+                        class="fas fa-plus border-2 px-1 rounded-full p-0.5 text-xs"></i> Tambah Unit</button>
             </a>
         </div>
     </div>
