@@ -8,7 +8,7 @@
                 class="bg-slate-100 border border-slate-200 rounded-full shadow px-3 py-2 text-slate-400 cursor-pointer hover:-translate-y-0.5 transition-all ease-in-out duration-300">
                 Informasi Unit
             </button>
-            <a href="{{ route('inventaris.tambah') }}" class="flex items-start">
+            <a href="{{ route('inventaris.unit.create', ['id' => $id]) }}" class="flex items-start">
                 <button
                     class="bg-red-700 rounded-full px-3 py-2 text-white text-sm shadow cursor-pointer hover:-translate-y-0.5 transition-all ease-in-out border-2 border-red-700"><i
                         class="fas fa-plus border-2 px-1 rounded-full p-0.5 text-xs"></i> Tambah Unit</button>
@@ -95,26 +95,7 @@
 
                 </div>
             </div>
-            <table class="w-full border-collapse">
-                <thead class="">
-                    <tr class="bg-gray-100">
-                        <th class="rounded-l-xl px-4 py-2 text-red-700">Nama Unit</th>
-                        <th class="px-4 py-2 text-red-700">Ketersediaan Unit</th>
-                        <th class="px-4 py-2 text-red-700">Pesanan Berlangsung</th>
-                        <th class="px-4 py-2 text-red-700">Pesanan Sekarang</th>
-                        <th class="px-4 py-2 text-red-700">Varian</th>
-                        <th class="px-4 py-2 text-red-700">Status</th>
-                        <th class="rounded-r-xl px-4 py-2 text-red-700">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="p-4">
-                            sepeda 1
-                        </td class="p-4">
-                    </tr>
-                </tbody>
-            </table>
+            <x-table.dynamic :headers="$headers" :data="$units" />
             <x-modal name="hapusModal" title="Keterangan Unit" maxWidth="3xl">
                 <div class="bg-gray-100/50 rounded-lg  border border-slate-200 p-4 w-full">
                     @php

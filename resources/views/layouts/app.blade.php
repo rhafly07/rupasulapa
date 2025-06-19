@@ -23,7 +23,7 @@
     <div class="min-h-screen bg-gray-100" x-data="{ sidebarOpen: true }">
         @include('components.layout.sidebar')
 
-        <div class="transition-all duration-300 lg:ml-64" :class="sidebarOpen ? 'lg:ml-64' : 'lg:ml-16'">
+        <div class="transition-all duration-300" :class="sidebarOpen ? 'lg:ml-64' : 'lg:ml-16'">
             @include('components.layout.header')
 
             <main class="p-6">

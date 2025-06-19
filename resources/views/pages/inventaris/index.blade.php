@@ -42,7 +42,7 @@
     </div>
     <div class="flex flex-row justify-between items-center h-fit my-4">
         <span class="font-bold text-xl">Pesanan</span>
-        <a href="{{ route('inventaris.kategori') }}">
+        <a href="{{ route('inventaris.kategori.create') }}">
             <button
                 class="bg-red-700 rounded-full px-3 py-3 text-white text-sm shadow-md cursor-pointer hover:-translate-y-0.5 transition-all ease-in-out duration-300">
                 <i class="fas fa-plus border-2 rounded-full px-1 p-0.5 text-xs"></i> Tambah Jenis Produk
@@ -60,113 +60,17 @@
             </div>
         </div>
         <div class="bg-white grid grid-cols-6 gap-5 p-8 rounded-lg h-fit shadow">
-            <a href="{{ route('inventaris.detail-unit') }}">
-                <div
-                    class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                    <img src="/images/logo.png" alt="">
-                    <span class="text-sm text-slate-400">Merek</span>
-                    <span class="text-slate-500 font-semibold">Nama</span>
-                    <span class="text-green-600 text-sm">Unit</span>
-                </div>
-            </a>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
-            <div
-                class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
-                <img src="/images/logo.png" alt="">
-                <span class="text-sm text-slate-400">Merek</span>
-                <span class="text-slate-500 font-semibold">Nama</span>
-                <span class="text-green-600 text-sm">Unit</span>
-            </div>
+            @foreach ($productType as $pt)
+                <a href="{{ route('inventaris.unit.index', $pt->id) }}">
+                    <div
+                        class="flex flex-col shadow-md items-center p-2 rounded-lg border border-slate-300 cursor-pointer hover:-translate-y-1 transition-all ease-in-out duration-300">
+                        <img src="/images/logo.png" alt="">
+                        <span class="text-sm text-slate-400">{{ $pt->brand }}</span>
+                        <span class="text-slate-500 font-semibold">{{ $pt->name }}</span>
+                        <span class="text-green-600 text-sm">Unit</span>
+                    </div>
+                </a>
+            @endforeach
         </div>
         {{-- <div class="flex flex-col w-full h-fit py-20 items-center">
             <img src="/images/nodata.svg" class="w-96 mx-auto" alt="">

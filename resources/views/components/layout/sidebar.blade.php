@@ -1,5 +1,5 @@
 <aside
-    class="hidden lg:w-64 lg:flex lg:flex-col lg:fixed lg:inset-y-0 bg-white border-r border-gray-200 shadow-sm transition-all duration-300 z-40"
+    class="hidden lg:flex lg:flex-col lg:fixed lg:inset-y-0 bg-white border-r border-gray-200 shadow-sm transition-all duration-300 z-40"
     :class="sidebarOpen ? 'lg:w-64' : 'lg:w-16'">
 
     <!-- Header -->
@@ -8,7 +8,7 @@
             <img :class="sidebarOpen ? 'w-8 h-8' : 'w-10 h-10'"
                 class="w-8 h-8 transition-all duration-200 object-contain" src="/images/logo.png" alt="App Logo">
             <span x-show="sidebarOpen" class="text-red-700 font-bold text-lg transition-opacity duration-200">
-                {{ config('app.name') }}
+                {{-- {{ config('app.name') }} --}} Rental.Id
             </span>
         </div>
         <button @click="sidebarOpen = false" x-show="sidebarOpen"

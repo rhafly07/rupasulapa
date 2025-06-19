@@ -6,6 +6,8 @@ return [
         'menu' => 'Dashboard',
         'children' => [],
         'route' => 'dashboard',
+        'roles' => ['admin', 'superadmin', 'staff'],
+
     ],
     [
         'icon' => 'warehouse',

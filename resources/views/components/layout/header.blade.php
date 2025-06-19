@@ -2,7 +2,7 @@
 // resources/views/components/layout/header.blade.php
 ?>
 <header class="bg-white shadow-sm border-b border-gray-200">
-    <div class="flex items-center justify-between px-6 py-4">
+    <div class="flex items-center justify-between p-4">
         <div class="flex items-center space-x-4">
             <!-- Mobile menu button -->
             <button @click="sidebarOpen = !sidebarOpen"
@@ -19,7 +19,7 @@
         </div>
 
         <!-- User menu -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4 pr-4">
             <!-- User dropdown -->
             <div class="relative" x-data="{ open: false }">
                 <button @click="open = !open"
