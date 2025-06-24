@@ -2,7 +2,7 @@
     @section('title', 'Pesanan')
     <div class="flex flex-row justify-between items-center h-fit mb-4">
         <span class="font-bold text-xl">Pesanan</span>
-        <a href="{{ route('inventaris.tambah') }}" class="flex items-start">
+        <a href="{{ route('pesanan.tambah') }}" class="flex items-start">
             <button
                 class="bg-red-700 rounded-full px-3 py-2 text-white text-sm shadow cursor-pointer hover:-translate-y-0.5 transition-all ease-in-out border-2 border-red-700"><i
                     class="fas fa-plus border-2 rounded-full p-0.5 px-1 text-xs"></i> Tambah Pesanan</button>

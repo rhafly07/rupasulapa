@@ -4,7 +4,7 @@
 
     <div class="flex flex-row justify-between items-center h-fit mb-4">
         <span class="font-bold text-xl">Pelanggan</span>
-        <a href="{{ route('inventaris.tambah') }}" class="flex items-start">
+        <a href="{{ route('pelanggan.tambah') }}" class="flex items-start">
             <button
                 class="bg-red-700 rounded-full px-3 py-2 text-white text-sm shadow cursor-pointer hover:-translate-y-0.5 transition-all ease-in-out border-2 border-red-700"><i
                     class="fas fa-plus border-2 rounded-full px-1 p-0.5 text-xs"></i> Tambah Pelanggan</button>

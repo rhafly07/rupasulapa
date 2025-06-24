@@ -89,7 +89,7 @@
                     </select>
                 </div>
                 <div>
-                    <label for="" class="block text-sm font-medium text-gray-700 mb-1">Skema Bagi Hasil <span
+                    <label for="" class="block text-sm font-medium text-gray-700 mb-1">Status Unit <span
                             class="text-red-700">*</span></label>
                     <div x-data="{ selected: 'aktif' }" class="flex flex-row gap-4 mb-10 ml-auto">
                         @php

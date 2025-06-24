@@ -7,7 +7,9 @@ use Illuminate\Support\Facades\DB;
 
 class ProductTypesController extends Controller
 {
+
     public function create() {
+
         return view('pages.inventaris.kategori');
     }
 

@@ -58,71 +58,34 @@
                             <option value="">ALL COLUMN</option>
                         </select>
                     </div>
-                    <div class="flex items-center justify-center ">
-                        <ul class="inline-flex items-center space-x-2 text-sm">
-                            <li>
-                                <button class="px-3 py-1 text-red-700" disabled>
-                                    <i class="fas fa-chevron-left"></i>
-                                </button>
-                            </li>
-
-                            <li>
-                                <button class="px-3 py-1 rounded-md bg-red-700 text-white font-semibold">1</button>
-                            </li>
-                            <li>
-                                <button
-                                    class="px-3 py-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 transition">2</button>
-                            </li>
-                            <li>
-                                <button
-                                    class="px-3 py-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 transition">3</button>
-                            </li>
-                            <li>
-                                <span class="px-3 py-1 text-gray-500">...</span>
-                            </li>
-                            <li>
-                                <button
-                                    class="px-3 py-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 transition">10</button>
-                            </li>
-
-                            <li>
-                                <button class="px-3 py-1 text-red-700">
-                                    <i class="fas fa-chevron-right"></i>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-
+                    <x-table.pagination :currentPage="$units->currentPage()" :lastPage="$units->lastPage()"
+                        baseUrl="{{ route('inventaris.unit.index', $id) }}?page=" />
                 </div>
             </div>
-            <x-table.dynamic :headers="$headers" :data="$units" />
+            <x-table.dynamic :headers="$headers" :data="$formattedData" />
             <x-modal name="hapusModal" title="Keterangan Unit" maxWidth="3xl">
                 <div class="bg-gray-100/50 rounded-lg  border border-slate-200 p-4 w-full">
                     @php
                         $data = [
                             [
                                 'title' => 'Merek',
-                                'isi' => 'Merek',
+                                'isi' => $ketUnit->brand,
                             ],
                             [
                                 'title' => 'Ditambahkan',
-                                'isi' => 'Ditambahkan',
+                                'isi' => $ketUnit->created_at,
                             ],
                             [
                                 'title' => 'Harga',
-                                'isi' => 'Harga',
+                                'isi' => $ketUnit->retail_price,
                             ],
                             [
                                 'title' => 'Kategori',
-                                'isi' => 'Kategori',
-                            ],
-                            [
-                                'title' => 'Koleksi',
-                                'isi' => 'Koleksi',
+                                'isi' => json_decode($ketUnit->categories),
                             ],
                             [
                                 'title' => 'Deskripsi',
-                                'isi' => 'Deskripsi',
+                                'isi' => $ketUnit->description,
                             ],
                         ];
                     @endphp
@@ -132,7 +95,18 @@
                                 class="grid grid-cols-3 gap-4 w-full p-1 px-4 justify-start rounded-lg text-slate-600 {{ $loop->odd ? 'bg-white' : 'bg-slate-100/50' }}">
                                 <span class="font-medium">{{ $dt['title'] }}</span>
                                 <span class="text-cente pr-4">:</span>
-                                <span>{{ $dt['isi'] }}</span>
+                                <span>
+                                    @if (is_array($dt['isi']))
+                                        <div class="flex flex-warp gap-1">
+                                            @foreach ($dt['isi'] as $isi)
+                                                <span
+                                                    class="bg-red-100 rounded-full px-2 w-fit text-red-700 text-xs">{{ $isi }}</span>
+                                            @endforeach
+                                        </div>
+                                    @else
+                                        {{ $dt['isi'] }}
+                                    @endif
+                                </span>
                             </div>
                         @endforeach
                     </div>

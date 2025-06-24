@@ -6,17 +6,38 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
+use function Pest\Laravel\get;
+
 class RentalUnitsController extends Controller
 {
     public function index($id) {
+
+        $ketUnit = DB::table('product_types')
+        ->where('id', $id)
+        ->select('brand', 'created_at','retail_price','categories','description')
+        ->first();
+
+
+        // dd($ketUnit);
+
         $headers = ['Nama Unit', 'Tanggal Beli', 'Catatan', 'Status'];
+
         $units = DB::table('rental_units')
         ->where('product_type_id', $id)
         ->select('unit_code', 'purchase_date', 'note', 'status')
-        ->get();
+        ->paginate(5);
+
+        $formattedData = $units->map(function ($item) {
+            return [
+                $item->unit_code,
+                $item->purchase_date,
+                $item->note,
+                $item->status,
+            ];
+        });
 
 
-        return view('pages.inventaris.detail-unit', compact('headers', 'units', 'id'));
+        return view('pages.inventaris.detail-unit', compact('headers', 'formattedData',  'units', 'id', 'ketUnit'));
     }
    public function create($id){
         $productType = DB::table('product_types')->where('id', $id)->first();

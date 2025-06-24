@@ -36,12 +36,14 @@ Route::middleware(['auth', 'menu.access'])->group(function () {
     // Pesanan routes
     Route::prefix('pesanan')->name('pesanan.')->group(function () {
         Route::view('/', 'pages.pesanan.index')->name('index');
+        Route::view('/tambah', 'pages.pesanan.tambah')->name('tambah');
         Route::view('/detail-pesanan', 'pages.pesanan.detail-pesanan')->name('detail-pesanan');
     });
 
     // Pelanggan routes
     Route::prefix('pelanggan')->name('pelanggan.')->group(function () {
         Route::view('/', 'pages.pelanggan.index')->name('index');
+        Route::view('/tambah', 'pages.pelanggan.tambah')->name('tambah');
     });
 
 });
