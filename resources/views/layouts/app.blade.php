@@ -128,137 +128,25 @@
         .chat-container::-webkit-scrollbar-thumb:hover {
             background: #94a3b8;
         }
-
-        /* @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .message-user {
-            animation: slideInRight 0.3s ease-out;
-        }
-
-        .message-ai {
-            animation: slideInLeft 0.3s ease-out;
-        }
-
-        .modal-enter {
-            animation: slideUp 0.3s ease-out;
-        }
-
-        .typing-dots {
-            display: inline-flex;
-            gap: 2px;
-        }
-
-        .typing-dot {
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background-color: #6B7280;
-            animation: typing 1.5s infinite;
-        }
-
-        .typing-dot:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .typing-dot:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        @keyframes typing {
-
-            0%,
-            60%,
-            100% {
-                transform: translateY(0);
-                opacity: 0.4;
-            }
-
-            30% {
-                transform: translateY(-10px);
-                opacity: 1;
-            }
-        }
-
-        .modal-backdrop {
-            backdrop-filter: blur(4px);
-        }
-
-        .chat-container::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        .chat-container::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .chat-container::-webkit-scrollbar-thumb {
-            background: #CBD5E1;
-            border-radius: 2px;
-        }
-
-        .lontara-text {
-            font-size: 1.5rem;
-            line-height: 1.4;
-        }
-
-        .chat-bubble {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 40;
-        } */
     </style>
 
 </head>
 
-<body class="font-sans antialiased h-screen bg-gray-200 overflow-hidden flex items-center" x-data="mainApp()">
+<body class="font-sans antialiased h-screen bg-gray-200 min-h-screen flex justify-center items-center"
+    x-data="mainApp()">
 
-    <div class="relative flex flex-col items-center h-screen w-full">
+    <div class="relative flex flex-col items-center h-screen w-full  max-w-md mx-auto">
         <div class="flex space-x-2 items-center border border-b-gray-200 bg-white max-w-md w-full px-5 py-2 shadow-lg">
             {{-- <button><i class="fas fa-arrow-left text-gray-800 mr-2"></i></button> --}}
             <img src="/images/logo.svg" class="w-12 h-12 bg-red-700 rounded-full p-2" alt="">
             <h1 class="text-lg font-black text-orange-400">Rupasulapa</h1>
         </div>
 
-        <main class="h-screen max-w-md w-full bg-gray-50">
+        <main class="h-screen max-w-md w-full overflow-y-auto bg-gray-50">
             {{ $slot }}
         </main>
         <button @click="openModal"
-            class="absolute flex items-center justify-center rounded-full text-2xl w-16 h-16 bg-red-700 text-white p-5 bottom-6 right-[38%] hover:-translate-y-0.5 transition-all ease-in-out">
+            class="absolute flex items-center justify-center rounded-full text-2xl w-16 h-16 bg-red-700 text-white p-5 bottom-6 right-4 hover:-translate-y-0.5 transition-all ease-in-out">
             <i class="fas fa-comments"></i>
         </button>
 
