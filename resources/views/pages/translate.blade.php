@@ -140,6 +140,8 @@
                                 </span>
                             </div>
 
+                            dd()
+
                             @foreach (session('results') as $result)
                                 @if ($result['success'])
                                     <div class="bg-gray-50 rounded-xl p-6 space-y-4">

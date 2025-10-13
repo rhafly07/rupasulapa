@@ -106,15 +106,6 @@
                     </div>
                 @endif
             </div>
-
-            @if ($translations->count() >= 5)
-                <div class="text-center pt-2">
-                    <a href="{{ route('translate.history') }}"
-                        class="inline-block px-6 py-2 bg-gray-600 text-white rounded-lg text-sm font-semibold hover:bg-gray-700 transition-colors">
-                        Lihat Semua History ({{ $totalTranslations }} kata)
-                    </a>
-                </div>
-            @endif
         </div>
     </div>
 
