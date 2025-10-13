@@ -62,8 +62,7 @@
                 @endif
             </div>
 
-            {{-- Daftar history maksimal 5 --}}
-            <div class="flex flex-col space-y-3 max-h-[60vh] overflow-y-auto pr-1">
+            <div class="flex flex-col space-y-3 pr-1">
                 @php
                     $limitedTranslations = $translations->take(5);
                 @endphp
