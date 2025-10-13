@@ -48,7 +48,7 @@
                     alt="">
             </div>
         </div>
-        <div class="flex flex-col space-y-4 mt-2">
+        <div class="flex flex-col space-y-4 mt-2 max-h-[500px] overflow-y-auto">
             <div class="flex justify-between items-center">
                 <div class="flex flex-col space-y-2">
                     <h1 class="font-black">History Terjemahan</h1>
@@ -106,6 +106,15 @@
                     </div>
                 @endif
             </div>
+
+            @if ($translations->count() >= 5)
+                <div class="text-center pt-2">
+                    <a href="{{ route('translate.history') }}"
+                        class="inline-block px-6 py-2 bg-gray-600 text-white rounded-lg text-sm font-semibold hover:bg-gray-700 transition-colors">
+                        Lihat Semua History ({{ $totalTranslations }} kata)
+                    </a>
+                </div>
+            @endif
         </div>
     </div>
 

@@ -21,7 +21,9 @@ class HistoryController
             return $item;
         });
 
-    return view('pages.utama.index', compact('translations'));
+        $totalTranslations = $query->count();
+
+    return view('pages.utama.index', compact('translations', 'totalTranslations'));
     }
 
 
